@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useSearchParams } from 'next/navigation';
 
 
-const Generate = () => {
+const GenerateForm = () => {
 
     const searchParams = useSearchParams()
 
