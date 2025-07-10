@@ -126,4 +126,10 @@ const Generate = () => {
     )
 }
 
-export default Generate
+export default function Generate() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <GenerateForm />
+    </Suspense>
+  )
+}
