@@ -37,19 +37,14 @@ export default async function Page({ params }) {
         <div className="links">
   {item.links.map((linkItem, index) => {
     return (
-    <Link
-  key={index}
+   <a
   href={linkItem.link.startsWith("http") ? linkItem.link : `https://${linkItem.link}`}
-  passHref
+  target="_blank"
+  rel="noopener noreferrer"
 >
-  <a
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block py-4 px-2 my-3 min-w-100 bg-purple-100 rounded-md shadow-lg transition-transform duration-150 hover:scale-105 hover:shadow-xl"
-  >
-    {linkItem.linktext}
-  </a>
-</Link>
+  {linkItem.linktext}
+</a>
+
 
 
     );
