@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
+
 
 
 const GenerateForm = () => {
