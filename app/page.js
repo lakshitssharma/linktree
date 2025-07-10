@@ -1,5 +1,5 @@
 "use client"
-// import Image from "next/image";
+ import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -35,11 +35,11 @@ export default function Home() {
           </div>
         </div>
         <div className=" flex items-center justify-center flex-col mr-[5vw]">
-          <img className="h-150" src="home2.png" alt="hompage img" />
+          <Image className="h-150" src="home2.png" alt="hompage img" />
         </div>
       </section>
       <section className="bg-red-400 min-h-[100vh]">
-        <img className="h-full w-fit" src="links.png" alt="links" />
+        <Image className="h-full w-fit" src="links.png" alt="links" />
       </section>
     </main>
   );
