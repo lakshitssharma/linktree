@@ -34,22 +34,14 @@ export default async function Page({ params }) {
         <img src={item.pic} alt={item.pic} className="mx-auto rounded-full w-32 h-32 object-cover" />
         <span className="font-bold text-xl block mt-2">@{item.handle}</span>
         <span className="description">{item.desc}</span>
-        <div className="links w-full">
+      <div className="links">
   {item.links.map((linkItem, index) => {
-    const href = linkItem.link.startsWith("http")
-      ? linkItem.link
-      : `https://${linkItem.link}`;
-
     return (
-      <a
-        key={index}
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block py-4 px-4 my-3 bg-purple-100 rounded-md shadow-lg transition-transform duration-150 hover:scale-105 hover:shadow-xl text-center"
-      >
-        {linkItem.linktext}
-      </a>
+      <Link key={index} href={linkItem.link}>
+        <div className="py-4 px-2 my-3 min-w-100 bg-purple-100 rounded-md shadow-lg transition-transform duration-150 hover:scale-105 hover:shadow-xl">
+          {linkItem.linktext}
+        </div>
+      </Link>
     );
   })}
 </div>
